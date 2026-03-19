@@ -9,7 +9,8 @@
 ## 주요 기능
 
 ### 📄 로그 파싱 & 필터링
-- Serilog 포맷 자동 파싱 (타임스탬프, 레벨, 스레드ID, 핸들러 추출)
+- **서버 로그**: Serilog 포맷 자동 파싱 (타임스탬프, 레벨, 스레드ID, 핸들러 추출)
+- **Unity Editor.log**: Unity 에디터 로그 파싱 지원 (에러/경고/스택트레이스 자동 감지)
 - 로그 레벨 / 핸들러 / 내용 / 시스템 필터
 - 에러/경고 내용 보기
 - 드래그 & 드롭, 클립보드 붙여넣기 지원
@@ -104,13 +105,6 @@
 
 - .NET 설치 불필요 (self-contained)
 - Windows x64 전용
-
-## 빌드
-
-```bash
-cd LogAnalyzer
-dotnet publish -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true -o publish
-```
 
 ## 기술 스택
 
